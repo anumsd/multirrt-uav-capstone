@@ -1,6 +1,6 @@
 # Capstone Proposal (Track A: Reproduce and Extend)
 
-**Student:** [your name] | **Repository:** [your GitHub repo link] | **Date:** [date]
+**Student:** Anum Shahzad | **Repository:** https://github.com/anumsd/multirrt-uav-capstone | **Date:** 19 November 2026
 
 ## 1. Benchmark paper
 - T. H. Khuat, D.-N. Bui, H. T. T. Nguyen, M. L. Trinh, M. T. Nguyen, M. D. Phung, "Multi-goal Rapidly Exploring Random Tree with Safety and Dynamic Constraints for UAV Cooperative Path Planning," *IEEE Transactions on Vehicular Technology*, 2025, doi:10.1109/TVT.2025.3560658.
