@@ -11,7 +11,7 @@
 
 ## 2. Result to reproduce
 - Figs 13, 14 and 15 of the paper, scenarios 1 and 2: MultiRRT vs RRT* vs RRT*-Smart on path length F_L, smooth score F_S and computation time F_T, 10 runs per method per scenario, as in the paper.
-- Paper's claims to check: MultiRRT has the best score on all three metrics, and its smooth score is at least 3 times better than the other two.
+- Paper's claims to check: MultiRRT has the lowest median computation time and by far the best smooth score (about 5 to 8 times lower than both baselines in the paper's figures), and the lowest median path length, with a near-tie against RRT*-Smart in scenario 1.
 - Approximate values read from the paper's Figs 13 to 15 (median of each box, read from the plots by eye):
 Scenario 1: F_L about 1330 m (RRT*), 1160 m (RRT*-Smart), 1150 m (MultiRRT); F_S about 0.67, 0.85, 0.13; F_T about 3 s, 38 s, under 1 s.
 Scenario 2: F_L about 1290 m, 1110 m, 1050 m; F_S about 0.67, 0.76, 0.10; F_T about 3.5 s, 39 s, 0.5 s.
