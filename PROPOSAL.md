@@ -1,6 +1,6 @@
 # Capstone Proposal (Track A: Reproduce and Extend)
 
-**Student:** Anum Shahzad | **Repository:** https://github.com/anumsd/multirrt-uav-capstone | **Date:** 19 November 2026
+**Student:** Anum Shahzad | **Repository:** https://github.com/anumsd/multirrt-uav-capstone | **Date:** 21 November 2026
 
 ## 1. Benchmark paper
 - T. H. Khuat, D.-N. Bui, H. T. T. Nguyen, M. L. Trinh, M. T. Nguyen, M. D. Phung, "Multi-goal Rapidly Exploring Random Tree with Safety and Dynamic Constraints for UAV Cooperative Path Planning," *IEEE Transactions on Vehicular Technology*, 2025, doi:10.1109/TVT.2025.3560658.
@@ -19,13 +19,12 @@ I will compare rankings and ratios, since absolute times depend on hardware. In 
 - Note: the released code uses a maximum turning angle of 60 degrees, while the paper text says 75 degrees. I will use the released 60 degrees as the main setting, run 75 degrees once for comparison, and discuss any difference.
 
 ## 3. Research question
-How do the maximum turning angle (30, 45, 60 and 75 degrees) and the width of a narrow passage (5 widths, from wide down to near the UAV size) together affect MultiRRT's success rate, path length and smoothness, and does a tight turning limit make narrow passages fail sooner?
-
+How do the maximum turning angle (30, 45, 60 and 75 degrees) and the width of a narrow passage (5 widths) affect MultiRRT's success rate, path length and smoothness?
 Extension design: a new test map with two staggered walls, each with one gap of adjustable width, so the paths must turn through the gaps. 30 seeded trials per (width, angle) pair. A failed run (not all three goals reached within 5000 iterations) counts as a failure and is never silently retried. RRT* is run on the same maps as an unconstrained reference.
 
 ## 4. Data and compute
 - Pure Python simulation (NumPy, SciPy, Matplotlib). No GPU and no dataset.
-- Runs on Kaggle notebooks (CPU). Single MultiRRT run takes about 1 to 2 s on the paper's maps; RRT* about 10 s; RRT*-Smart about 2 min. Narrow-passage failures may run longer, so I will time a small pilot before the full grid.
+- Runs on Colab or Kaggle notebooks (CPU). Single MultiRRT run takes about 1 to 2 s on the paper's maps; RRT* about 10 s; RRT*-Smart about 2 min. Narrow-passage failures may run longer, so I will time a small pilot before the full grid.
 - All results come from my own code, with fixed random seeds, saved to the repo.
 
 ## 5. Plan
