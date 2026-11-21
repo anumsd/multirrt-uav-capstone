@@ -5,14 +5,17 @@
 ## 1. Benchmark paper
 - T. H. Khuat, D.-N. Bui, H. T. T. Nguyen, M. L. Trinh, M. T. Nguyen, M. D. Phung, "Multi-goal Rapidly Exploring Random Tree with Safety and Dynamic Constraints for UAV Cooperative Path Planning," *IEEE Transactions on Vehicular Technology*, 2025, doi:10.1109/TVT.2025.3560658.
 - Free version: arXiv:2504.11823 (https://arxiv.org/abs/2504.11823).
-- Venue rank: Venue rank: IEEE TVT, Q1 in all five of its Scimago categories (2025), including Automotive Engineering and Electrical and Electronic Engineering; SJR 2025 = 2.052, H-index 254
+- Venue rank: IEEE TVT, Q1 in all five of its Scimago categories (2025), including Automotive Engineering and Electrical and Electronic Engineering; SJR 2025 = 2.052, H-index 254
 - Citations: 36 (Google Scholar, 21 November 2026).
 - Code (MIT licence, Python): https://github.com/duynamrcv/multi-target_RRT. No dataset needed; the four test maps are in the code.
 
 ## 2. Result to reproduce
 - Figs 13, 14 and 15 of the paper, scenarios 1 and 2: MultiRRT vs RRT* vs RRT*-Smart on path length F_L, smooth score F_S and computation time F_T, 10 runs per method per scenario, as in the paper.
 - Paper's claims to check: MultiRRT has the best score on all three metrics, and its smooth score is at least 3 times better than the other two.
-- Approximate values read from the paper's scenario 1 box plots (to be replaced by exact values from my own reading of the figures): F_L about 1330 m (RRT*), 1160 m (RRT*-Smart), 1150 m (MultiRRT); F_S about 0.65, 0.83, 0.13; F_T about 3 s, 38 s, under 1 s. [TODO: verify]
+- Approximate values read from the paper's Figs 13 to 15 (median of each box, read from the plots by eye):
+Scenario 1: F_L about 1330 m (RRT*), 1160 m (RRT*-Smart), 1150 m (MultiRRT); F_S about 0.67, 0.85, 0.13; F_T about 3 s, 38 s, under 1 s.
+Scenario 2: F_L about 1290 m, 1110 m, 1050 m; F_S about 0.67, 0.76, 0.10; F_T about 3.5 s, 39 s, 0.5 s.
+I will compare rankings and ratios, since absolute times depend on hardware. In scenario 1 the length difference between MultiRRT and RRT*-Smart is within the spread of the boxes.
 - Note: the released code uses a maximum turning angle of 60 degrees, while the paper text says 75 degrees. I will use the released 60 degrees as the main setting, run 75 degrees once for comparison, and discuss any difference.
 
 ## 3. Research question
