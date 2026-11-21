@@ -5,7 +5,8 @@
 ## 1. Benchmark paper
 - T. H. Khuat, D.-N. Bui, H. T. T. Nguyen, M. L. Trinh, M. T. Nguyen, M. D. Phung, "Multi-goal Rapidly Exploring Random Tree with Safety and Dynamic Constraints for UAV Cooperative Path Planning," *IEEE Transactions on Vehicular Technology*, 2025, doi:10.1109/TVT.2025.3560658.
 - Free version: arXiv:2504.11823 (https://arxiv.org/abs/2504.11823).
-- Venue rank: IEEE TVT, quartile [TODO: check on Scimago and write it here].
+- Venue rank: Venue rank: IEEE TVT, Q1 in all five of its Scimago categories (2025), including Automotive Engineering and Electrical and Electronic Engineering; SJR 2025 = 2.052, H-index 254
+- Citations: 36 (Google Scholar, 21 November 2026).
 - Code (MIT licence, Python): https://github.com/duynamrcv/multi-target_RRT. No dataset needed; the four test maps are in the code.
 
 ## 2. Result to reproduce
